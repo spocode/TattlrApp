@@ -1,2 +1,49 @@
+h1, h2, h3, h4, .navbar {
+	font-family: 'Holtwood One SC', serif;
+}
+
+p, .container .row li {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+.brand img {
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul.nav li {
+	margin-top: 4px;
+}
+
 .hero-unit {background:url('../img/pothole.jpg');
+}
+
+.home .hero-unit p {
+	font-weight: bold;
+	color: black;
+}
+
+footer h6{
+	text-align: right;
+	margin:0 10px;
+}
+
+
+.team .span3 {
+	text-align: center;
+}
+
+.team .span3 p {
+	margin-top: 10px;
+}
+
+.created h3 {
+	text-align: center;
+}
+
+.why p.well {
+	font-size: 2em;
+	line-height: 1.3em;
 }
