@@ -24,20 +24,20 @@
    			<option value="spokane">Spokane</option>
 		</select>
 
-		<button id="upload-photo">Tattle</button>
 		<!-- <div id="photo-container"></div>-->
-<a href="#form" data-role="button">Link to form</a>
+<a href="#form" data-role="button" id="upload-photo" data-theme="b" data-icon="star" data-iconpos="right">Tattle!</a>
 </div>
 </div>
 
 <div data-role="page" id="form">
 <img src="img/header-nobkg.png" />
 <form action="http://tattlr-spocode.rhcloud.com/tattl" method="post" enctype="multipart/form-data">
-
+<label>Which City?</lable>
 		<select name="city" id="city">
    			<option value="spokane">Spokane</option>
 		</select>
-<br />
+<br /><label>What is the problem?</lable>
+
 		<select name="problem" id="problem">
    			<option value="pothole">Pothole</option>
    			<option value="tree">Down Tree</option>
@@ -46,8 +46,7 @@
    			<option value="flood">Flooded Area</option>
 		</select>
 		<br />
-
-		<textarea width="100%">Add Notes</textarea>
+<label>Your Comments</label>		<textarea width="100%">Add Notes</textarea>
 		<br />
 <button type="submit" data-theme="b" name="submit" value="submit-value">Submit</button>	</form>	
 	
