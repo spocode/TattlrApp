@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+				<script>
+				function window$forge$_receive(result) {
+					try {
+						window.forge._receive(JSON.parse(result));
+					} catch (e) {
+						forge.logging.error("window$forge$_receive -> " + e);
+					}
+				}
+			</script><script src='../forge/all.js'></script>
+	<link rel="stylesheet" href="css/tattlr.css">
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tattlr.js"></script>
+</head>
+
+<body>
+
+<div data-role="page">
+
+	<div data-role="header">
+	</div><!-- /header -->
+
+	<div data-role="content">	
+
+		<img src="img/header-nobkg.png" />
+		<h2>Tattle on...</h2>
+
+		<select name="city" id="city">
+   			<option value="spokane">Spokane</option>
+		</select>
+
+		<button id="upload-photo">Tattle</button>
+		<!-- <div id="photo-container"></div>-->
+
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+
+
+</body>
+
+</html>

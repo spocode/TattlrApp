@@ -1,0 +1,25 @@
+body, html {
+  background-color: #F4F4F4;
+  font-family: Helvetica, Arial, sans-serif;;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+button {
+  font-size: 16pt;
+  height: 100px;
+  margin: 15px 0;
+  width: 80%;
+}
+
+#photo-container {
+  width: 100%;
+}
+
+#photo-container img {
+  background-color: #FFF;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 80%;
+}

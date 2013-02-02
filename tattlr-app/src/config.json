@@ -1,0 +1,62 @@
+{
+	"author": "Tattlr Team", 
+	"config_version": "1.111", 
+	"description": "tell on your city", 
+	"homepage": "http://www.tattlr.co", 
+	"modules": {
+		"display": {
+			"orientations": {
+				"android": "any", 
+				"ipad": "any", 
+				"iphone": "any"
+			}
+		}, 
+		"event": true, 
+		"file": true, 
+		"geolocation": true, 
+		"icons": {
+			"android": {
+				"36": "img/android-icon-36x36.png", 
+				"48": "img/android-icon-48x48.png", 
+				"72": "img/android-icon-72x72.png"
+			}, 
+			"ios": {
+				"114": "img/apple-touch-icon-114x114.png", 
+				"144": "img/apple-touch-icon-144x144.png", 
+				"57": "img/apple-touch-icon-57x57.png", 
+				"72": "img/android-icon-72x72.png", 
+				"prerendered": true
+			}
+		}, 
+		"jquery": {
+			"version": "1.7.1"
+		}, 
+		"launchimage": {
+			"android": "android.png", 
+			"android-landscape": "android-landscape.png", 
+			"ipad": "img/ipad-spash-768x1004.png", 
+			"ipad-landscape": "img/ipad-spash-1024x748.png", 
+			"ipad-landscape-retina": "img/ipad-spash-2048x1496.png", 
+			"ipad-retina": "img/ipad-spash-1536x2008.png", 
+			"iphone": "img/iphone-spash-320x480.png", 
+			"iphone-retina": "img/iphone-spash-640x1136.png"
+		}, 
+		"logging": {
+			"level": "DEBUG"
+		}, 
+		"request": {
+			"permissions": []
+		}, 
+		"tools": true, 
+		"topbar": true
+	}, 
+	"name": "Tattlr", 
+	"partners": {
+		"parse": {
+			"applicationId": "dxrgKDDp9U29Q9CyJUnwC7TNcGKraRRPiklQKoDz", 
+			"clientKey": "sna2kts2K077cHcifCcHUrDQBscZGbMZKuQQtnxr"
+		}
+	}, 
+	"platform_version": "v1.4.8", 
+	"version": "1.1"
+}
