@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+				<script>
+				function window$forge$_receive(result) {
+					try {
+						window.forge._receive(JSON.parse(result));
+					} catch (e) {
+						forge.logging.error("window$forge$_receive -> " + e);
+					}
+				}
+			</script><script src='../forge/all.js'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="css/tattlr.css">
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tattlr.js"></script>
+</head>
+
+<body>
+		<img src="img/header-nobkg.png" />
+<form action="POST" id="submitform">
+
+		<select name="city" id="city">
+   			<option value="spokane">Spokane</option>
+		</select>
+<br />
+		<select name="problem" id="problem">
+   			<option value="pothole">Pothole</option>
+   			<option value="tree">Down Tree</option>
+   			<option value="graffiti">Graffiti</option>
+   			<option value="car">Abandoned Car</option>
+   			<option value="flood">Flooded Area</option>
+		</select>
+		<br />
+
+		<textarea width="100%">Add Notes</textarea>
+		<br />
+<input type="submit" name="Tattle">
+	</form>	
+
+</body>
+
+</html>

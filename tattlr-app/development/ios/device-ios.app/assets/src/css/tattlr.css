@@ -23,3 +23,11 @@ button {
   padding: 10px;
   width: 80%;
 }
+
+#submitform{
+  font-size: 16pt;
+  height: 100px;
+  margin: 15px 0;
+  width: 80%;
+}
+}

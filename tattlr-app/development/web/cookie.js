@@ -23,7 +23,7 @@ var Cookie=exports.Cookie=function Cookie(cookiestr) {
 }
 
 Cookie.prototype.toString = function toString() {
-	var str=[this.name+"="+encodeURIComponent(this.value)];
+	var str=[this.name+"="+this.value];
 	if(this.expiration_date !== Infinity) {
 		str.push("expires="+(new Date(this.expiration_date)).toGMTString());
 	}
@@ -54,7 +54,7 @@ Cookie.prototype.parse = function parse(str) {
     	, key=pair[1]
     	, value=pair[2];
     	this.name = key;
-    	this.value = decodeURIComponent(value);
+    	this.value = value;
     
     	for(var i=1;i<parts.length;i++) {
     		pair=parts[i].match(/([^=]+)(?:=((?:.|\n)*))?/)

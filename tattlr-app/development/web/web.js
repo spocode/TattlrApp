@@ -48,6 +48,8 @@ app.post(/^\/_forge\/proxy\//, function(request, response) {
 		return;
 	}
 	
+	var headers = request.body.headers;
+	
 	// Unmunge cookies on user->proxy->url
 	Object.keys(request.headers).forEach(function (header) {
 		if (header.toLowerCase() == 'cookie') {
@@ -73,14 +75,6 @@ app.post(/^\/_forge\/proxy\//, function(request, response) {
 		}
 	});
 	
-	if (!request.body.headers['x-forwarded-for']) {
-		request.body.headers['x-forwarded-for'] = request.connection.remoteAddress + (request.headers['x-forwarded-for'] ? ', ' + request.headers['x-forwarded-for'] : '');
-	}
-
-	if (!request.body.headers['user-agent']) {
-		request.body.headers['user-agent'] = request.headers['user-agent'];
-	}
-	
 	var options = {
 		host: url.hostname,
 		port: url.port || (url.protocol == "http:" ? 80 : 443),
@@ -95,21 +89,16 @@ app.post(/^\/_forge\/proxy\//, function(request, response) {
 		response.statusCode = res.statusCode;
 		Object.keys(res.headers).forEach(function (header) {
 			if (header.toLowerCase() == 'set-cookie') {
-				// broken by commas in cookie values
-				// var cookies = res.headers[header].toString().split(',');
-				var cookies = res.headers[header].toString().split('[^\s],[^\s]');
-				cookies.forEach(function (cookieStr) {
-					// Munge cookies on url->proxy->user
-					var cookie = new Cookie().parse(cookieStr);
-					cookie.value = JSON.stringify({
-						value: cookie.value,
-						domain: cookie.domain || url.hostname,
-						path: cookie.path
-					});
-					cookie.path = '/_forge/proxy/'+(cookie.domain || url.hostname).split("").reverse().join("").replace(/\./g, "/");
-					delete cookie.domain;
-					response.setHeader("Set-Cookie", cookie.toString());
+				// Munge cookies on url->proxy->user
+				var cookie = new Cookie().parse(res.headers[header].toString());
+				cookie.value = JSON.stringify({
+					value: cookie.value,
+					domain: cookie.domain || url.hostname,
+					path: cookie.path
 				});
+				cookie.path = '/_forge/proxy/'+(cookie.domain || url.hostname).split("").reverse().join("").replace(/\./g, "/");
+				delete cookie.domain;
+				response.setHeader("Set-Cookie", cookie.toString());
 			} else {
 				response.setHeader(header, res.headers[header]);
 			}

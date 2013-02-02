@@ -1,51 +1,27 @@
 <!DOCTYPE html>
 <html>
-	<head><script src='/_forge/all.js'></script>
-	<title>Tattlr - Tell on your city</title>
-	<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
-	<script src="js/jquery-1.7.1.min.js"></script>
-	<script src="js/jquery.mobile-1.1.0.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+<head><script src='/_forge/all.js'></script>
+	<link rel="stylesheet" href="css/tattlr.css">
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tattlr.js"></script>
 </head>
+
 <body>
 
-<div data-role="page">
-
-	<div data-role="header">
-		<h1>Tattlr</h1>
-		<h4>Tell on your city</h4>
-	</div><!-- /header -->
-
-	<div data-role="content">
-<h2>Report a...</h2>
-
-<div data-role="controlgroup">
-<a href="#" id="pothole" data-role="button">Pothole</a>
-<a href="#" id="tree" data-role="button">Down Tree</a>
-<a href="#" id="floor" data-role="button">Flood</a>
-<a href="#" id="car" data-role="button">Abandoned Car</a>
-<a href="#" id="light" data-role="button">Broken Light</a>
-</div>
+	
 
 
-<!-- <script type="text/javascript">
-forge.file.getImage({width: 500, height: 500}, function (file) {
-    forge.file.imageURL(file, function (url) {
-        $('#photo-container').prepend($('&lt;img&gt;').attr('src', url));
-    });
-	    uploadPhotoFile(file);
-});
+		<img src="img/header-nobkg.png" />
+		<h2>Tattle on...</h2>
 
-</script> -->
-	</div><!-- /content -->
+		<select name="city" id="city">
+   			<option value="spokane">Spokane</option>
+		</select>
 
-	<div data-role="footer">
-		<h4>Get in touch:
-			<a href="mailto:talkback@tattlr.co">talkback@tattlr.co</a>
-		</h4>
-	</div><!-- /footer -->
-
-</div><!-- /page -->
+		<button id="upload-photo">Tattle</button>
+		<!-- <div id="photo-container"></div>-->
+<a href="form.html">Link to form</a>
 
 </body>
+
 </html>

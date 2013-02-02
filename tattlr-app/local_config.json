@@ -1,20 +1,13 @@
 {
-	"general": {
-	},
-	"ios": {
-		"profiles": {
-			"DEFAULT": {
-				"provisioning_profile": ""
-			}
-		}
-	},
-	"android": {
-		"sdk": "",
-		"profiles": {
-			"DEFAULT": {
-				"keystore": "",
-				"keyalias": ""
-			}
-		}
-	}
+    "ios": {
+        "device": "simulator", 
+        "simulatorsdk": "6.0", 
+        "simulatorfamily": "iphone", 
+        "profiles": {
+            "DEFAULT": {
+                "provisioning_profile": "/Users/chris_reilly/Downloads/tattlr.mobileprovision", 
+                "developer_certificate": "iPhone Developer: Chris Reilly (D83WT238G5)"
+            }
+        }
+    }
 }
