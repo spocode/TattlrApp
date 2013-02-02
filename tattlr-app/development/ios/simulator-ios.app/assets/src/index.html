@@ -3,15 +3,20 @@
 <head><script src='../forge/all.js'></script>
 	<link rel="stylesheet" href="css/tattlr.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="js/tattlr.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
 </head>
 
 <body>
 
 	
-
-
+<div data-role="page" id="home">
+	<div data-role="content">
 		<img src="img/header-nobkg.png" />
 		<h2>Tattle on...</h2>
 
@@ -21,7 +26,33 @@
 
 		<button id="upload-photo">Tattle</button>
 		<!-- <div id="photo-container"></div>-->
-<a href="form.html">Link to form</a>
+<a href="#form" data-role="button">Link to form</a>
+</div>
+</div>
+
+<div data-role="page" id="form">
+<img src="img/header-nobkg.png" />
+<form action="http://tattlr-spocode.rhcloud.com/tattl" method="post" enctype="multipart/form-data">
+
+		<select name="city" id="city">
+   			<option value="spokane">Spokane</option>
+		</select>
+<br />
+		<select name="problem" id="problem">
+   			<option value="pothole">Pothole</option>
+   			<option value="tree">Down Tree</option>
+   			<option value="graffiti">Graffiti</option>
+   			<option value="car">Abandoned Car</option>
+   			<option value="flood">Flooded Area</option>
+		</select>
+		<br />
+
+		<textarea width="100%">Add Notes</textarea>
+		<br />
+<button type="submit" data-theme="b" name="submit" value="submit-value">Submit</button>	</form>	
+	
+</div>
+
 
 </body>
 
